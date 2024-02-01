@@ -133,6 +133,7 @@
       </pose>
     </include>
 
+<!--
     <include>
       <uri>
          model://hovercrane
@@ -141,7 +142,7 @@
         <relative_to>park</relative_to>
       </pose>
     </include>
-
+-->
 
   </world>
 </sdf>
