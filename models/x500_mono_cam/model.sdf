@@ -4,6 +4,7 @@
     <include merge='true'>
       <uri>x500</uri>
     </include>
+<!--
     <include merge='true'>
       <uri>model://mono_cam</uri>
       <pose>.12 .03 .242 0 0 0</pose>
@@ -11,6 +12,16 @@
     <joint name="CameraJoint" type="fixed">
       <parent>base_link</parent>
       <child>mono_cam/base_link</child>
+      <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
+    </joint>
+-->
+    <include merge='true'>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Camera</uri>
+      <pose>.12 .03 .242 0 0.78540 0</pose>
+    </include>
+    <joint name="CameraJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>link</child>
       <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
     </joint>
   </model>
