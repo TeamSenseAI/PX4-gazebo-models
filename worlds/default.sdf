@@ -149,10 +149,10 @@
       <pose>.12 .03 .242 0 0.78540 0</pose>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Lidar 3d v1</uri>
       <pose>.5 0 .242 0 0.78540 0</pose>
-    </include>
+    </include> -->
 
   </world>
 </sdf>
