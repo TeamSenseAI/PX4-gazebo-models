@@ -133,6 +133,11 @@
       </pose>
     </include>
 
+    <include>
+      <uri>model://lidar</uri>
+      <pose>1 2 .1 0 0 0</pose>
+    </include>
+
 <!--
     <include>
       <uri>
