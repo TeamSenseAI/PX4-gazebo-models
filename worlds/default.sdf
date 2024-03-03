@@ -144,15 +144,20 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    <include>
+    <!-- <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Camera</uri>
       <pose>.12 .03 .242 0 0.78540 0</pose>
-    </include>
+    </include> -->
 
     <!-- <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Lidar 3d v1</uri>
       <pose>.5 0 .242 0 0.78540 0</pose>
     </include> -->
+
+    <include>
+      <uri>model://lidar</uri>
+      <pose>1 2 .1 0 0 0</pose>
+    </include>
 
   </world>
 </sdf>
