@@ -4,6 +4,7 @@
     <include merge='true'>
       <uri>hovercrane</uri>
     </include>
+    <render_engine>ogre2</render_engine>
 <!--
     <include merge='true'>
       <uri>model://mono_cam</uri>
@@ -18,11 +19,20 @@
     <include merge='true'>
       <uri>model://lidar</uri>
       <pose>.12 .03 .242 0 0.78540 0</pose>
+            <plugin
+      filename="ignition-gazebo-pose-publisher-system"
+      name="gz::sim::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_nested_model_pose>false</publish_nested_model_pose>
+    </plugin>
     </include>
     <joint name="lidarJoint" type="fixed">
       <parent>base_link</parent>
       <child>lidar/base_link</child>
       <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
     </joint>
+
   </model>
 </sdf>
