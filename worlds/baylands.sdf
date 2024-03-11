@@ -105,15 +105,7 @@
       <name>park</name>
       <pose>205 155 -1 0 0 0</pose>
     </include>
-    <!-- <include>
-      <uri>
-        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Coast Water
-      </uri>
-      <pose>0 0 -2 0 0 0
-        <relative_to>park</relative_to>
-      </pose>
 
-    </include> -->
 
     <include>
       <uri>
@@ -182,11 +174,6 @@
     </include>
 
     <include>
-      <uri>model://lidar</uri>
-      <pose>1 2 .1 0 0 0</pose>
-    </include>
-
-    <include>
       <pose>0 0 -2 0 0 0
       <relative_to>park</relative_to>
       </pose>
@@ -194,17 +181,6 @@
         waves
       </uri>
     </include>
-
-<!--
-    <include>
-      <uri>
-         model://hovercrane
-      </uri>
-      <pose>0 5 1 0 0 0
-        <relative_to>park</relative_to>
-      </pose>
-    </include>
--->
 
   </world>
 </sdf>
