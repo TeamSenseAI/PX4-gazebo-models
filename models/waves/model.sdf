@@ -21,10 +21,10 @@
             <cell_count>50 50</cell_count>
             <wave>
               <model>PMS</model>
-              <period>10</period>
+              <period>5</period>
               <number>3</number>
               <scale>1.1</scale>
-              <gain>2.0</gain>
+              <gain>1.0</gain>
               <direction>1 0</direction>
               <angle>0.5</angle>
               <tau>2.0</tau>

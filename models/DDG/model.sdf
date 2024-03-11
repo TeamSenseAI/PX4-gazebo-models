@@ -24,10 +24,10 @@
         <mass>8534794.8</mass>
         <inertia>
         <CoG>0 0 5 0 0 0</CoG>
-          <ixx>16716818081.6</ixx>
+          <ixx>15716818081</ixx>
           <ixy>0.0</ixy>
           <ixz>0.0</ixz>
-          <iyy>15049688164</iyy>
+          <iyy>4549688164.6</iyy>
           <iyz>0.0</iyz>
           <izz>16808567125.7</izz>
         </inertia>
