@@ -33,5 +33,14 @@
         </inertia>
       </inertial>
     </link>
+    <link name="for_pose_information">
+    </link>
+
+    <joint name="pose_information" type="fixed">
+      <parent>link</parent>
+      <child>for_pose_information</child>
+      <pose relative_to="link">-65 0 10 0 0 1.57079</pose>
+    </joint>
+
   </model>
 </sdf>
