@@ -33,14 +33,104 @@
         </inertia>
       </inertial>
     </link>
-    <link name="for_pose_information">
+    <placement_frame>mount_point</placement_frame>
+
+    <!-- <link name="stern_beacon_port">
+      <visual name="visual">
+        <pose>-2 -61.5 -5 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <pose>-2 -61 -5 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-pose-publisher-system"
+        name="gz::sim::systems::PosePublisher">
+        <publish_link_pose>true</publish_link_pose>
+        <publish_collision_pose>true</publish_collision_pose>
+        <publish_visual_pose>true</publish_visual_pose>
+        <publish_nested_model_pose>true</publish_nested_model_pose>
+      </plugin>
     </link>
 
-    <joint name="pose_information" type="fixed">
-      <parent>link</parent>
-      <child>for_pose_information</child>
-      <pose relative_to="link">-65 0 10 0 0 1.57079</pose>
-    </joint>
+     <link name="stern_beacon_starboard">
+      <visual name="visual">
+        <pose>2 -61.5 -5 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <pose>2 -61 -5 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+
+
+
+      <plugin
+        filename="ignition-gazebo-pose-publisher-system"
+        name="gz::sim::systems::PosePublisher">
+        <publish_link_pose>true</publish_link_pose>
+        <publish_collision_pose>true</publish_collision_pose>
+        <publish_visual_pose>true</publish_visual_pose>
+        <publish_nested_model_pose>true</publish_nested_model_pose>
+      </plugin>
+    </link> -->
+
+    <include>
+      <pose>2 -61 -4.5 0 0 0 </pose>
+      <uri>
+        simple_tag
+      </uri>
+      <name>beacon_anchor_port</name>
+      <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+    </include>
+
+    <include>
+      <pose>-2 -61 -4.5 0 0 0 </pose>
+      <uri>
+        simple_tag
+      </uri>
+      <name>beacon_anchor_starboard</name>
+      <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+    </include>
+
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
 
   </model>
 </sdf>

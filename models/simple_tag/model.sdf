@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version='1.9'>
+  <model name='simple_tag'>
+    <self_collide>false</self_collide>
+    <static>false</static>
+     <link name="link">
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

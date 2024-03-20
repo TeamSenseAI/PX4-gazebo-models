@@ -181,6 +181,18 @@
         <nR>15000.0</nR>
         <nRR>0.0</nRR>
       </plugin>
+
+
+      <plugin filename="libgz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+
+      <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+
     </include>
 
     <include>

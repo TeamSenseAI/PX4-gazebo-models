@@ -19,7 +19,7 @@
     <include merge='true'>
       <uri>model://lidar</uri>
       <pose>.12 .03 .242 0 0.78540 0</pose>
-            <plugin
+    <plugin
       filename="ignition-gazebo-pose-publisher-system"
       name="gz::sim::systems::PosePublisher">
       <publish_link_pose>true</publish_link_pose>
@@ -34,5 +34,17 @@
       <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
     </joint>
 
+    <!-- Just include it as is and it will end up in the frame of the UAV. Otherwise, it's becomes a challenge -->
+    <include>
+      <pose relative_to="base_link">0 0 .242 0 0 0</pose>
+      <uri>
+        simple_tag
+      </uri>
+      <name>beacon_rover</name>
+      <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <gaussianNoise>0</gaussianNoise>
+      </plugin>
+    </include>
   </model>
 </sdf>
