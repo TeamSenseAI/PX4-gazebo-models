@@ -120,7 +120,7 @@
       <uri>
          model://DDG
       </uri>
-      <pose>-100 400 0 3.1416 0 1.5708
+      <pose>-100 400 0 3.1416 0 0
         <relative_to>park</relative_to>
       </pose>
 
@@ -191,6 +191,25 @@
       <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
         <dimensions>3</dimensions>
         <gaussianNoise>0</gaussianNoise>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-trajectory-follower-system"
+        name="ignition::gazebo::systems::TrajectoryFollower">
+        <link_name>link</link_name>
+        <loop>true</loop>
+        <!-- <waypoints>
+          <waypoint>-100 400</waypoint>
+          <waypoint>-200 500</waypoint>
+        </waypoints> -->
+        <line>
+          <direction>0</direction>
+          <length>100</length>
+        </line>
+        <force>100000</force>
+        <torque>0</torque>
+        <range_tolerance>5</range_tolerance>
+        <bearing_tolerance>5</bearing_tolerance>
       </plugin>
 
     </include>
