@@ -44,7 +44,7 @@
         </gz-gui>
         <play_pause>1</play_pause>
         <step>1</step>
-        <start_paused>1</start_paused>
+        <start_paused>true</start_paused>
       </plugin>
       <plugin name='World stats' filename='WorldStats'>
         <gz-gui>
@@ -206,7 +206,8 @@
           <direction>0</direction>
           <length>100</length>
         </line>
-        <force>100000</force>
+        <!-- <force>100000</force> -->
+        <force>1</force>
         <torque>0</torque>
         <range_tolerance>5</range_tolerance>
         <bearing_tolerance>5</bearing_tolerance>
