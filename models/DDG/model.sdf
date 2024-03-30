@@ -4,19 +4,19 @@
     <!-- <static>true</static> -->
     <link name="link">
       <collision name="collision">
-      <!-- Flip XY axis for +X = Bow +Y=Starboard -->
-        <pose>0 0 0 0 0 -1.571428571</pose>
+      <!-- Fliped DAE model for GZ +X = Starboard +Y = Forward -->
+        <pose>0 0 0 0 0 -1.57079632679</pose>
         <geometry>
           <mesh>
-            <uri>us_navy_ddg-51_uss_arleigh_burke.dae</uri>
+            <uri>us_navy_ddg-51_uss_arleigh_burke_ENU.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="visual">
-        <pose>0 0 0 0 0 -1.571428571</pose>
+        <pose>0 0 0 0 0 -1.57079632679</pose>
         <geometry>
           <mesh>
-            <uri>us_navy_ddg-51_uss_arleigh_burke.dae</uri>
+            <uri>us_navy_ddg-51_uss_arleigh_burke_ENU.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -49,7 +49,7 @@
     </include>
 
     <include>
-      <pose>-61 -2 -4.5 0 0 0 </pose>
+      <pose>-61 -2 -4.5 0 0 -.4 </pose>
       <uri>
         simple_tag
       </uri>

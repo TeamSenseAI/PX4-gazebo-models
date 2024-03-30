@@ -131,7 +131,7 @@
       <uri>
          model://DDG
       </uri>
-      <pose>-100 400 0 3.1416 0 0
+      <pose>-100 400 0 0 0 0
         <relative_to>park</relative_to>
       </pose>
 
