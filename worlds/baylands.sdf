@@ -114,6 +114,17 @@
       <pose>-15 30 .3 0 0 2
         <relative_to>park</relative_to>
       </pose>
+      <static>false</static>
+      <plugin
+        filename="gz-sim-odometry-publisher-system"
+        name="gz::sim::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <publish_link_pose>true</publish_link_pose>
+        <publish_collision_pose>false</publish_collision_pose>
+        <publish_visual_pose>false</publish_visual_pose>
+        <publish_model_pose>true</publish_model_pose>
+        <publish_nested_model_pose>false</publish_nested_model_pose>
+      </plugin>
     </include>
 
     <include>
