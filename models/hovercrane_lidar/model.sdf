@@ -7,24 +7,18 @@
     <render_engine>ogre2</render_engine>
 
     <include merge='true'>
-      <uri>model://mono_cam</uri>
-      <pose>.12 .03 .242 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Camera</uri>
+      <pose>0.65 0 0.25 0 0.78540 0</pose>
     </include>
-
-    <!-- <include merge='true'>
-      <uri>model://mbzirc_rgbd_camera</uri>
-      <pose>.12 .03 .242 0 0 0</pose>
-    </include> -->
-
-    <!-- <joint name="CameraJoint" type="fixed">
+    <joint name="CameraJoint" type="fixed">
       <parent>base_link</parent>
-      <child>mono_cam/base_link</child>
-      <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
-    </joint> -->
+      <child>link</child>
+      <pose relative_to="base_link">0.6 0 0.25 0 0 0</pose>
+    </joint>
 
     <include merge='true'>
       <uri>model://lidar</uri>
-      <pose>.12 .03 .242 0 0.78540 0</pose>
+      <pose>0.6 0 0.075 0 0.78540 0</pose>
     <plugin
       filename="ignition-gazebo-pose-publisher-system"
       name="gz::sim::systems::PosePublisher">
@@ -37,7 +31,7 @@
     <joint name="lidarJoint" type="fixed">
       <parent>base_link</parent>
       <child>lidar/base_link</child>
-      <pose relative_to="base_link">.12 .03 .242 0 0 0</pose>
+      <pose relative_to="base_link">0.6 0 0.3 0 0 0</pose>
     </joint>
 
     <!-- Just include it as is and it will end up in the frame of the UAV. Otherwise, it's becomes a challenge -->
