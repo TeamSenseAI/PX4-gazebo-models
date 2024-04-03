@@ -36,8 +36,8 @@
     </link>
     <placement_frame>mount_point</placement_frame>
 
-    <include>
-      <pose>-61 2 -4.5 0 0 0 </pose>
+    <!-- <include>
+      <pose relative_to="link">-61 2 -6 0 0 0 </pose>
       <uri>
         simple_tag
       </uri>
@@ -49,7 +49,7 @@
     </include>
 
     <include>
-      <pose>-61 -2 -4.5 0 0 -.4 </pose>
+      <pose relative_to="link">-61 -2 -6 0 0 0 </pose>
       <uri>
         simple_tag
       </uri>
@@ -58,7 +58,7 @@
         <dimensions>3</dimensions>
         <gaussianNoise>0</gaussianNoise>
       </plugin>
-    </include>
+    </include> -->
 
     <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>

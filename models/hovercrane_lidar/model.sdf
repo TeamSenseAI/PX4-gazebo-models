@@ -34,17 +34,25 @@
       <pose relative_to="base_link">0.6 0 0.3 0 0 0</pose>
     </joint>
 
+
+
     <!-- Just include it as is and it will end up in the frame of the UAV. Otherwise, it's becomes a challenge -->
-    <include>
+    <!-- <include>
       <pose relative_to="base_link">0 0 .242 0 0 0</pose>
       <uri>
-        simple_tag
+        model://simple_tag
       </uri>
       <name>beacon_rover</name>
       <plugin filename="libgz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
         <dimensions>3</dimensions>
         <gaussianNoise>0</gaussianNoise>
       </plugin>
-    </include>
+    </include> -->
+
+    <!-- <joint name="BeaconJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>link</child>
+      <pose relative_to="base_link">0 0 .242 0 0 0</pose>
+    </joint> -->
   </model>
 </sdf>
