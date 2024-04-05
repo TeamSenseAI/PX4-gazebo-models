@@ -145,8 +145,7 @@
         <publish_nested_model_pose>false</publish_nested_model_pose>
       </plugin>
 
-      <plugin
-        filename="libSurface.so"
+      <!-- <plugin filename="libSurface.so"
         name="ported::surface::plugin">
         <link_name>link</link_name>
         <vehicle_length>153</vehicle_length>
@@ -170,18 +169,17 @@
             <steepness>0.0</steepness>
           </wave>
         </wavefield>
-      </plugin>
+      </plugin> -->
 
-      <plugin
-        filename="libSimpleHydrodynamics.so"
+      <!-- <plugin filename="libSimpleHydrodynamics.so"
         name="ported::SimpleHydrodynamics::plugin">
         <link_name>link</link_name>
-        <!-- Added mass -->
+
         <xDotU>0.0</xDotU>
         <yDotV>0.0</yDotV>
         <nDotR>0.0</nDotR>
         <zDotW>500000</zDotW>
-        <!-- Linear and quadratic drag -->
+
         <xU>145346.3</xU>
         <xUU>720.4</xUU>
         <yV>123346.0</yV>
@@ -191,7 +189,7 @@
         <mQ>500.0</mQ>
         <nR>15000.0</nR>
         <nRR>0.0</nRR>
-      </plugin>
+      </plugin> -->
 
 
       <plugin filename="libgz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
@@ -204,25 +202,28 @@
         <gaussianNoise>0</gaussianNoise>
       </plugin>
 
-      <plugin
+      <!-- <plugin
         filename="ignition-gazebo-trajectory-follower-system"
         name="ignition::gazebo::systems::TrajectoryFollower">
         <link_name>link</link_name>
-        <loop>true</loop>
+        <loop>true</loop> -->
         <!-- <waypoints>
           <waypoint>-100 400</waypoint>
           <waypoint>-200 500</waypoint>
         </waypoints> -->
-        <line>
+        <!-- <circle>
+          <radius>250</radius>
+
+        </circle> -->
+        <!-- <line>
           <direction>0</direction>
-          <length>100</length>
-        </line>
-        <!-- <force>100000</force> -->
-        <force>1</force>
-        <torque>0</torque>
+          <length>150</length>
+        </line> -->
+        <!-- <force>900000</force>
+        <torque>900000</torque>
         <range_tolerance>5</range_tolerance>
         <bearing_tolerance>5</bearing_tolerance>
-      </plugin>
+      </plugin> -->
 
     </include>
 
