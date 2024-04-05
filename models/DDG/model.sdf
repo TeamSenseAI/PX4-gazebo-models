@@ -79,8 +79,8 @@
       <plugin
         filename="ignition-gazebo-velocity-control-system"
         name="gz::sim::systems::VelocityControl">
-        <initial_linear>1 0 0.03925</initial_linear>
-        <initial_angular>0 0 0.02</initial_angular>
+        <initial_linear>0 0 0.03925</initial_linear>
+        <initial_angular>0 0 0</initial_angular>
       </plugin>
 
   </model>
