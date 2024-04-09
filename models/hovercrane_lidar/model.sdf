@@ -6,7 +6,7 @@
     </include>
     <render_engine>ogre2</render_engine>
 
-    <include merge='true'>
+    <!-- <include merge='true'>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Camera</uri>
       <pose>0.65 0 0.25 0 0.78540 0</pose>
     </include>
@@ -14,6 +14,15 @@
       <parent>base_link</parent>
       <child>link</child>
       <pose relative_to="base_link">0.6 0 0.25 0 0 0</pose>
+    </joint> -->
+
+    <include merge='true'>
+      <uri>model://mono_cam</uri>
+      <pose>0.6 0 0.025 0 0.78540 0</pose>
+    </include>
+    <joint name="CameraJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>mono_cam/base_link</child>
     </joint>
 
     <include merge='true'>

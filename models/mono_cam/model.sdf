@@ -27,24 +27,24 @@
                 <fx>554.3</fx>
                 <fy>554.3</fy>
                 <!-- cx = ( width + 1 ) / 2 -->
-                <cx>320.5</cx>
+                <cx>400.5</cx>
                 <!-- cy = ( height + 1 ) / 2 -->
-                <cy>240.5</cy>
+                <cy>300.5</cy>
                 <s>0</s>
             </intrinsics>
           </lens>
           <image>
-            <width>640</width>
-            <height>480</height>
-            <format>L_INT8</format>
+            <width>800</width>
+            <height>600</height>
+            <!-- <format>L_INT8</format> -->
           </image>
           <clip>
             <near>0.1</near>
-            <far>100</far>
+            <far>300</far>
           </clip>
         </camera>
         <always_on>1</always_on>
-        <update_rate>30</update_rate>
+        <update_rate>5</update_rate>
         <visualize>true</visualize>
         <topic>hovercrane/camera/mono</topic>
       </sensor>
